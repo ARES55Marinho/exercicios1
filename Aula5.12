@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    float nota1, nota2, media;
+    int aprovados = 0;
+    int reprovados = 0;
+    int exame = 0;
+    int i;
+
+    for (i = 1; i <= 60; i++) {
+        printf("\nAluno %d\n", i);
+
+        printf("Digite a primeira nota: ");
+        scanf("%f", &nota1);
+
+        printf("Digite a segunda nota: ");
+        scanf("%f", &nota2);
+
+        media = (nota1 + nota2) / 2;
+
+        printf("Media do aluno: %.2f\n", media);
+
+        if (media >= 5) {
+            aprovados++;
+        }
+        else if (media < 3) {
+            reprovados++;
+        }
+        else {
+            exame++;
+        }
+    }
+
+    printf("\n===== RESULTADO FINAL =====\n");
+    printf("Aprovados: %d\n", aprovados);
+    printf("Reprovados: %d\n", reprovados);
+    printf("Exame: %d\n", exame);
+
+    return 0;
+}
