@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    float nota1, nota2;
+    float media;
+    float somaMedias = 0;
+    float mediaTotal;
+    int i;
+
+    for (i = 1; i <= 10; i++) {
+        printf("\nAluno %d\n", i);
+
+        printf("Digite a primeira nota: ");
+        scanf("%f", &nota1);
+
+        printf("Digite a segunda nota: ");
+        scanf("%f", &nota2);
+
+        media = (nota1 + nota2) / 2;
+
+        printf("Media do aluno %d: %.2f\n", i, media);
+
+        somaMedias = somaMedias + media;
+    }
+
+    mediaTotal = somaMedias / 10;
+
+    printf("\nMedia total da turma: %.2f\n", mediaTotal);
+
+    return 0;
+}
